@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  node-express:
+    build: .
+    image: docker-chatnode:dev
+    container_name: chatnode
+    command: npm start
+    ports:
+      - 4000:3000
+    volumes:
+      - ./src:/app/src
